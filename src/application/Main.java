@@ -12,6 +12,11 @@ public class Main {
 	public static void main(String[] args) {
 		
 		System.out.println("Main method.");
+		SellerDao sellerDao = DaoFactory.createSellerDao();
+		
+		Seller seller = sellerDao.findById(3);
+		
+		System.out.println(seller);
 		
 	}
 
