@@ -18,20 +18,9 @@ public class Main {
 		Department dep = new Department(null, 2);
 		List<Seller> list = sellerDao.findAll();
 		
+		sellerDao.deleteById(9);
 		
-		Seller newSeller = new Seller(null, "Grego", "greg@gmail", new Date(), 4000.0, dep);
-
-		sellerDao.insert(newSeller);
-		
-		Seller seller = sellerDao.findById(1);
-		
-		seller.setName("Martha");
-		sellerDao.update(seller);
-		
-		
-		System.out.println(seller);
-		
-		
+	
 	}
 
 }
